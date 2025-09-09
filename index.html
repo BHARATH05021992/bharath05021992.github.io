@@ -1,13 +1,262 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Site</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bharath — 3D Web Designer & Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div style="font-weight: bold; color: purple; font-size: 2em;">
-        hey, I am Bharat.
-    </div>
+  <header class="topbar">
+    <div class="brand" aria-hidden="true">Bharath</div>
+    <nav class="nav">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#cv" class="nav-link">CV</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button id="download-cv-btn" class="mini-btn" title="Download CV">Download CV</button>
+  </header>
+
+  <!-- decorative blurred blobs (pure CSS) -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+    <div class="grid-noise"></div>
+  </div>
+
+  <main id="main" class="snap-container">
+    <!-- PANEL 1: HOME / INTRO (frame-wise) -->
+    <section id="home" class="panel panel-home" data-title="Home">
+      <div class="panel-inner">
+        <div class="col left">
+          <h1 class="title">Hey, I’m <span class="accent">Bharath</span>.</h1>
+          <p class="subtitle">3D web designer • Full-stack developer • Entrepreneur • Art gallery owner • Researcher</p>
+
+          <div class="meta-chips">
+            <span class="chip">Hosted multiple sites</span>
+            <span class="chip">Published research paper</span>
+            <span class="chip">Founded art & entrepreneurship clubs</span>
+            <span class="chip">Olympiad top performer</span>
+            <span class="chip">Volunteered with NGOs</span>
+            <span class="chip">Internships & real projects</span>
+          </div>
+
+          <div class="role-cards">
+            <div class="role-card">Web Developer</div>
+            <div class="role-card">Entrepreneur</div>
+            <div class="role-card">UI/UX Master</div>
+            <div class="role-card">Backend Expert</div>
+            <div class="role-card">Researcher</div>
+          </div>
+
+          <div class="cta-row">
+            <a class="cta" href="#projects">See projects ↓</a>
+            <button id="scroll-work" class="ghost">Work overview</button>
+          </div>
+        </div>
+
+        <div class="col right">
+          <div class="monitor-wrap" role="img" aria-label="code monitor">
+            <div class="monitor">
+              <div class="screen">
+                <div class="code-viewport" id="codeViewport" tabindex="0" aria-label="Live code stream">
+                  <!-- lines injected by script.js -->
+                </div>
+                <div class="monitor-reflections"></div>
+              </div>
+              <div class="bezel"></div>
+            </div>
+
+            <!-- little 3D art gallery composition (pure divs, gradients & transforms) -->
+            <div class="art-composition" aria-hidden="true">
+              <div class="art-dot d1"></div>
+              <div class="art-dot d2"></div>
+              <div class="art-square s1"></div>
+              <div class="art-arc a1"></div>
+            </div>
+
+            <p class="hint">Hover / focus / touch the monitor to speed up the code.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 2: WORK / SKILLS -->
+    <section id="work" class="panel panel-work" data-title="Work">
+      <div class="panel-inner narrow">
+        <h2 class="section-title">Overview — Skills & Strengths</h2>
+        <p class="lead">I craft scalable web products and visual experiences using JS, Node.js, CSS 3D & WebGL ideas. I also run art & entrepreneurship initiatives.</p>
+
+        <div class="skill-grid">
+          <div class="skill">JavaScript • ESNext</div>
+          <div class="skill">HTML & CSS • Modern</div>
+          <div class="skill">Node.js & APIs</div>
+          <div class="skill">Three.js & 3D UI</div>
+          <div class="skill">UI / UX Design</div>
+          <div class="skill">Product & Growth</div>
+          <div class="skill">Automation / Tools</div>
+          <div class="skill">Research / Publications</div>
+        </div>
+
+        <div class="boxes-row">
+          <div class="box">Web Developer</div>
+          <div class="box">Entrepreneur</div>
+          <div class="box">UI / UX Master</div>
+          <div class="box">Backend Expert</div>
+        </div>
+
+        <div class="experience-line">
+          <div class="exp-left">
+            <div class="exp-title">Full-Stack Developer</div>
+            <div class="exp-sub">Built production apps & hosted multiple websites.</div>
+          </div>
+          <div class="exp-right">
+            <div class="exp-title">Entrepreneur (Art)</div>
+            <div class="exp-sub">Own an art gallery and run art projects & sales.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 3: CV / RESUME -->
+    <section id="cv" class="panel panel-cv" data-title="CV">
+      <div class="panel-inner narrow">
+        <h2 class="section-title">Curriculum Vitae</h2>
+        <div class="cv-grid">
+          <div class="cv-left">
+            <h3>Education & Achievements</h3>
+            <ul class="cv-list">
+              <li><strong>10th Marks:</strong> Very good — consistent academic improvement across years.</li>
+              <li><strong>School Improvement:</strong> Significant grade improvement (dedicated study & projects).</li>
+              <li><strong>Olympiads:</strong> Excelled in competitive exams and subject olympiads.</li>
+              <li><strong>Research:</strong> Published research paper on humanised robotics.</li>
+              <li><strong>Hosted Sites:</strong> Built and hosted multiple sites end-to-end.</li>
+            </ul>
+
+            <h3>Experience & Leadership</h3>
+            <ul class="cv-list">
+              <li><strong>Art Gallery Owner:</strong> Curated & sold works, handled business operations.</li>
+              <li><strong>Founder:</strong> Started art and entrepreneurship clubs at school.</li>
+              <li><strong>Internships:</strong> Several internships — full-stack & product-focused.</li>
+              <li><strong>Volunteer:</strong> NGO, charity & social service contributions.</li>
+            </ul>
+          </div>
+
+          <div class="cv-right">
+            <div class="cv-card-3d">
+              <h3>Bharath — Snapshot</h3>
+              <p class="cv-role">3D Web Designer • Full-Stack Developer • Entrepreneur</p>
+              <p class="cv-meta">Based in: India</p>
+              <div class="cv-stats">
+                <div><strong>Sites hosted</strong><span>• multiple</span></div>
+                <div><strong>Projects</strong><span>• internships & real products</span></div>
+                <div><strong>Publications</strong><span>• research paper</span></div>
+              </div>
+              <div class="cv-actions">
+                <button id="cv-download-2" class="btn-3d">Download CV</button>
+                <button id="email-me" class="ghost">Email me</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 4: PROJECTS -->
+    <section id="projects" class="panel panel-projects" data-title="Projects">
+      <div class="panel-inner narrow">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="lead">The following projects showcase my skill and experience through real-world examples of my work.</p>
+
+        <div class="project-grid">
+          <article class="proj-card">
+            <div class="proj-3d" aria-hidden="true"></div>
+            <h4>3D Portfolio Engine</h4>
+            <p>Interactive portfolio built using CSS 3D transforms and JS animations.</p>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-3d" aria-hidden="true"></div>
+            <h4>Realtime Dashboard</h4>
+            <p>Streaming data dashboard with efficient state management & visuals.</p>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-3d" aria-hidden="true"></div>
+            <h4>Automation Toolkit</h4>
+            <p>Scripts & workflows for content production and deployment pipelines.</p>
+          </article>
+
+          <article class="proj-card">
+            <div class="proj-3d" aria-hidden="true"></div>
+            <h4>Art Gallery CMS</h4>
+            <p>Custom CMS for managing artworks, orders and exhibitions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 5: TESTIMONIALS -->
+    <section id="testimonials" class="panel panel-testimonials" data-title="Testimonials">
+      <div class="panel-inner narrow">
+        <h2 class="section-title">What people say</h2>
+        <div class="testi-wrap">
+          <button id="t-left" class="t-btn">◀</button>
+          <div class="t-window" id="t-window">
+            <div class="t-item">"Remarkable problem-solver and fast delivery." — Team Lead</div>
+            <div class="t-item">"Clean UI and delightful UX." — Product Manager</div>
+            <div class="t-item">"Built a scalable prototype in days." — Founder</div>
+            <div class="t-item">"Strong leadership running clubs & events." — Mentor</div>
+          </div>
+          <button id="t-right" class="t-btn">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 6: CONTACT -->
+    <section id="contact" class="panel panel-contact" data-title="Contact">
+      <div class="panel-inner narrow">
+        <h2 class="section-title">Contact</h2>
+        <p class="lead">Want to work together? I build fast, efficient, beautiful web experiences and business ideas.</p>
+
+        <div class="contact-wrap">
+          <form id="contactForm" class="contact-form">
+            <label><span>Name</span><input name="name" required /></label>
+            <label><span>Email</span><input name="email" type="email" required /></label>
+            <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn-3d">Send Message</button>
+              <button type="button" id="cool-action" class="ghost">Fancy UI</button>
+            </div>
+          </form>
+
+          <div class="contact-side">
+            <div class="card-3d contact-card">
+              <h3>Quick Contact</h3>
+              <p>Email: <strong>bharath@example.com</strong></p>
+              <p>Role: 3D Web Designer & Full-Stack Dev</p>
+              <p>Based in: India</p>
+              <div class="socials">
+                <button id="copy-email" class="mini-btn">Copy Email</button>
+                <button id="download-cv-3" class="mini-btn">Download CV</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="footer">
+          <small>© <span id="year"></span> Bharath — all visuals generated with code.</small>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite" role="status"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
